@@ -26,6 +26,7 @@ class SystemChangeLogView extends TStandardList
         
         parent::setDatabase('log');
         parent::setActiveRecord('SystemChangeLog');
+        parent::setDefaultOrder('logdate', 'desc');         // defines the default order
         parent::addFilterField('tablename');
         parent::addFilterField('login');
         parent::setLimit(20);
